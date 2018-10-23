@@ -1,6 +1,9 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 
+var nxb    = require("node-xmpp-bosh");
+var boshServer = nxb.start_bosh({logging: "TRACE", no_srv: true});
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -34,6 +37,7 @@ app.on('window-all-closed', function () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
+    boshServer.stop();
     app.quit()
   }
 })

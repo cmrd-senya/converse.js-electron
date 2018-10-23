@@ -2,18 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Converse.js Electron</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/converse.js/css/converse.min.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
   </body>
+
+  <script>
+    require('converse.js')
+
+    converse.initialize({
+        bosh_service_url: 'http://localhost:5280/http-bind/', // Please use this connection manager only for testing purposes
+        view_mode: 'fullscreen',
+        show_controlbox_by_default: true
+    });
+  </script>
+
 </html>

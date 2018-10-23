@@ -17,6 +17,9 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^3.0.3"
+    "converse.js": "^4.0.3",
+    "electron": "^2.0.12",
+    "electron-rebuild": "^1.8.2",
+    "node-xmpp-bosh": "git+https://github.com/cmrd-senya/node-xmpp-bosh.git"
   }
 }
