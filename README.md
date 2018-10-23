@@ -13,6 +13,8 @@ npm install
 ./node_modules/.bin/electron-rebuild --module-dir node_modules/node-expat
 ```
 
+**Warning**: while electron.js uses its own version of Node.js, initial `npm install` still runs Node version installed on your system and fails for Node `>= 10.x`. You have to run the initial `npm install` with Node version `<= 9.x`, but you don't depend on this after you have done it.
+
 3. Then run the application:
 
 ```
