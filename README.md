@@ -15,6 +15,8 @@ npm install
 
 **Warning**: while electron.js uses its own version of Node.js, initial `npm install` still runs Node version installed on your system and fails for Node `>= 10.x`. You have to run the initial `npm install` with Node version `<= 9.x`, but you don't depend on this after you have done it.
 
+Also, `libgconf-2.4` must be installed on your system (a dependency of Chrome/Chromium).
+
 3. Then run the application:
 
 ```
